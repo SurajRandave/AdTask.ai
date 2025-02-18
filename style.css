@@ -1,0 +1,824 @@
+/* Background */
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  background-color: black;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  position: relative;
+  overflow-y: auto;
+}
+
+/* Header */
+.header {
+  width: 100%;
+  background: black;
+  border-radius: 20px;
+  padding: 10px 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 100;
+}
+
+/* Container with border */
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: 80%;
+  /* Adjust width as needed */
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  /* Add border around the navbar content */
+  padding: 10px;
+  border-radius: 30px;
+  margin: 0 auto;
+  /* Center the nav-container */
+}
+
+/* Logo on the left */
+.logo {
+  font-size: 22px;
+  color: white;
+  font-weight: bold;
+  transform: translateX(10%);
+}
+
+/* Navigation links and Buttons container */
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px 15px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.nav a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+
+.btn-header {
+  background: rgba(200, 200, 200, 0.2);
+  padding: 8px 20px;
+  border-radius: 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.btn-header:hover {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.6);
+}
+
+/* Faint Glowing Text */
+.faint-text {
+  font-size: 80px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.1);
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Blurred Triangle */
+.triangle {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 800px;
+  background: radial-gradient(
+    circle at center,
+    rgba(246, 241, 241, 0.7),
+    transparent 80%
+  );
+  box-shadow: 50px 50px 50px rgba(246, 241, 241, 0.7);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  filter: blur(20px);
+  opacity: 0.6;
+  z-index: 1;
+}
+
+/* Main Content */
+.content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  font-size: 16px;
+  max-width: 600px;
+  margin-top: 280px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Button with Glow Effect */
+.btn {
+  background: rgba(200, 200, 200, 0.2);
+  padding: 12px 25px;
+  border-radius: 30px;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  display: inline-block;
+  margin-top: 15px;
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.4);
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.6);
+}
+
+/* Image Container */
+.image-container {
+  position: relative;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+}
+
+.image-container img {
+  width: 972px;
+  height: 582px;
+  border-radius: 15px;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Ticket Scroller Class */
+.TicketScroller {
+  width: 1440px;
+  height: 124px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.TicketScroller img {
+  width: 100%;
+  /* Make sure the image inside the container scales appropriately */
+  height: auto;
+}
+
+/* Social Media Class (for the second image) */
+.SocialMedia {
+  width: 930px;
+  height: 149px;
+  display: block;
+  margin: 50px auto;
+  /* Center the container */
+}
+
+.SocialMedia img {
+  width: 100%;
+  /* Make sure the image inside the container scales appropriately */
+  height: 100%;
+}
+/* Features Section */
+.featursblock h2 {
+  font-size: 12px;
+  color: #333;
+  margin-bottom: 20px;
+  border: 1px black;
+  border-radius: 10px;
+  background-color: #282828;
+}
+
+.features {
+  margin-bottom: 20px; /* Adjusts margin between sections */
+}
+
+.features-box h2 {
+  font-size: 36px;
+  color: white; /* Adjust color as needed */
+  /* Adds border */
+
+  margin-bottom: 2px; /* Margin between lines */
+}
+
+.features-box .line-one {
+  display: block;
+  margin-bottom: 2px; /* Margin between lines */
+}
+
+.features-box .line-two {
+  display: block;
+  margin-bottom: 2px; /* Margin between lines */
+  background: linear-gradient(90deg, #7687b5 0%, #91b0ff 42%, #e2e8f8 100%);
+  -webkit-background-clip: text; /* Ensures the background applies to the text */
+  color: transparent; /* Make text color transparent to show gradient */
+}
+
+/* Marketing Text */
+.marketing-text {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22.4px;
+  letter-spacing: 0%;
+  text-align: center;
+  color: white; /* Adjust color as needed */
+  margin-top: 2px;
+  margin-bottom: 1px;
+}
+
+.marketing-text a {
+  color: inherit; /* Inherits the color from parent */
+  text-decoration: none; /* Removes underline from the link */
+}
+.ellipse {
+  position: relative;
+  width: 495px;
+  height: 238px;
+  background: #d9d9d9; /* Adjust transparency as needed */
+  border-radius: 50%;
+  mix-blend-mode: plus-lighter;
+  margin-top: 1px; /* Ensuring 1px gap from .marketing-text */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.servicesblock {
+  position: relative;
+  width: 96px;
+  height: 34px;
+  background: linear-gradient(
+    90deg,
+    rgba(142, 141, 141, 0.15) 0%,
+    rgba(40, 40, 40, 0.15) 100%
+  );
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Poppins, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 150px;
+}
+
+.services-text {
+  width: 493px;
+  height: 83px;
+  text-align: center;
+  font-family: Poppins, sans-serif;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 43.2px;
+  letter-spacing: 0%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px; /* Adds exactly 20px below the Services block */
+}
+
+.services-text .first-line {
+  color: #ffffff; /* Black or any primary color */
+}
+
+.services-text .second-line {
+  background: linear-gradient(90deg, #7687b5 0%, #91b0ff 42%, #e2e8f8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+} /* Main Container */
+.services-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 26px;
+  left: 36px;
+}
+
+/* The Large Rectangle */
+.services-block {
+  width: 1153px;
+  height: 500px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  grid-template-rows: repeat(2, 1fr); /* 2 rows */
+  gap: 32px;
+  background: rgba(9, 9, 9, 0.05); /* Slight background */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Each Block Inside the Rectangle */
+.service-box {
+  position: relative;
+  background: rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 18px;
+  font-family: Poppins, sans-serif;
+  overflow: hidden; /* Ensure the triangle stays within the block */
+}
+
+/* Faint White Triangle Background */
+.service-box::before {
+  content: "";
+  position: absolute;
+  top: 50%; /* Position it in the center vertically */
+  left: 50%; /* Position it in the center horizontally */
+  transform: translate(-50%, -50%); /* Center the triangle */
+  width: 300px; /* Smaller triangle width */
+  height: 400px; /* Smaller triangle height */
+  background: radial-gradient(
+    circle at center,
+    rgba(246, 241, 241, 0.7),
+    transparent 80%
+  );
+  box-shadow: 50px 50px 50px rgba(246, 241, 241, 0.7);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  filter: blur(10px); /* Less blur for sharper triangle */
+  opacity: 0.5; /* Slightly more transparent */
+  z-index: -1; /* Behind the content */
+}
+
+/* Logo Block in the Center (60x60) */
+.service-box .logo {
+  width: 60px;
+  height: 60px;
+  background-color: #000000; /* Optional background color for logo */
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1; /* Ensure logo is above the triangle */
+}
+
+/* Logo Image Inside the Block */
+.service-box .logo img {
+  width: 40px; /* Logo image size */
+  height: 40px;
+  object-fit: contain; /* Ensure image maintains aspect ratio */
+}
+
+/* Heading Style */
+.service-box h3 {
+  font-family: Poppins, sans-serif;
+
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 43.2px;
+  letter-spacing: 0%;
+  text-align: center;
+  margin: 15px 0; /* Add space between logo and description */
+  color: #ffffff;
+}
+
+/* Description Style */
+.service-box p {
+  color: #fff2f2; /* Set your preferred text color here */
+  padding: 10px;
+  border-radius: 5px; /* Optional, for rounded corners */
+  font-family: Poppins, sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 15px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+.contact-us-block {
+  position: absolute;
+  width: 185px;
+  height: 48px;
+  top: 3500px; /* Adjusted for closer positioning, reduce this value for more closeness */
+  left: 631px;
+}
+
+.contact-us-button {
+  width: 185px;
+  height: 48px;
+  border-radius: 40px;
+  border: 1px solid #ffffff0d;
+  background-color: #252525; /* Button color */
+  background-image: url("https://s3-alpha-sig.figma.com/img/041f/3a07/cede6e34b2b24205d3024118619c50d9?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=oczMCn8hcjGzti2Y9zyJnCIoyNUGOcmfqwEhkeny8eet3q5BHgzCYiYXN56mzcSKQkfnXJfBx1AKQHx7BS6yiX3Ci08HYQFOHAX~BpGZY2pErMrxxcdSHbMvSX96K~Ly3N8bERRIo5x~BzFfq5ks8NGZqeaUDHfd0WvV8FDkWfjdIcsUpj7VtF9SEtW24aKz9D3fImk59IB9Bw27lJVKUNBvMC5LWmCsCYUjJEotnEfdhPtR5qbl0D03P4vc595JnvlqWKZNEzZtkrQENV-g0eN0jkaH2n6a~ySBUXe4jUeUvIAc4vIyKZi8Bqq95xavk-kE4qCO1Q7Gj-lJT0Jm3g__");
+  color: white;
+  text-align: center;
+  line-height: 48px;
+  font-size: 14px;
+  margin: 30px auto 50px auto; /* Center the button and adjust space */
+  display: block; /* Ensure the button is a block-level element */
+}
+
+.contact-us-button:hover {
+  background-color: #000000;
+}
+.testimonialblock {
+  position: relative;
+  width: 96px;
+  height: 34px;
+  background: linear-gradient(
+    90deg,
+    rgba(142, 141, 141, 0.15) 0%,
+    rgba(40, 40, 40, 0.15) 100%
+  );
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Poppins, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 400px; /* Adjust this value to suit your layout */
+}
+
+.testimonial-text {
+  width: 493px;
+  height: 83px;
+  text-align: center;
+  font-family: Poppins, sans-serif;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 43.2px;
+  letter-spacing: 0%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px; /* Adds exactly 20px below the Testimonial block */
+}
+
+.testimonial-text .first-line {
+  color: #ffffff; /* White or any primary color */
+}
+
+.testimonial-text .second-line {
+  background: linear-gradient(90deg, #7687b5 0%, #91b0ff 42%, #e2e8f8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.discovery-text {
+  font-family: Poppins, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0%;
+  width: 350px;
+  height: 21px;
+  top: 4279px;
+  left: 545px;
+  text-align: center; /* Centers the text horizontally */
+  margin-top: 20px; /* Adjusts the spacing between testimonial section and this text */
+  color: #ffffff; /* You can adjust the color if needed */
+}
+/* Container for the entire review grid */
+.review-grid {
+  width: 1120px;
+  height: 424px;
+  top: 4380px;
+  left: 160px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 blocks per row */
+  grid-gap: 32px;
+  margin-top: 30px; /* Adds distance from the previous section */
+}
+
+/* Individual review block */
+.review-block {
+  width: 352px;
+  height: 196px;
+  border-radius: 16px;
+  background: linear-gradient(167.98deg, #0b0b0b 4.68%, #131313 91.22%);
+  border: 1px solid;
+  border-image-source: linear-gradient(270deg, #7687b5 0%, #333b4f 100%);
+  position: relative;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  font-family: Poppins, sans-serif;
+}
+
+/* Review content (middle of the block) */
+.review-content {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  margin-bottom: 10px; /* Space between review content and writer's name */
+}
+
+/* Writer's name at the bottom right corner */
+.writer-name {
+  position: absolute;
+  bottom: 30px;
+  left: 10px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+/* Contact Us button */
+.contact-us-btn {
+  width: 138px;
+  height: 34px;
+  left: 20px;
+  font-family: Poppins, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 33.6px;
+  letter-spacing: 0%;
+  text-align: center;
+  background-color: #1e1d1d; /* Customize this color as needed */
+  color: white;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 300px; /* Adds 100px space from the Testimonial section */
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Container for the section with Data and Contact Form */
+.contact-section {
+    width: 1031px;
+    height: 314px;
+    display: flex;
+    gap: 27px;
+    margin-top: 100px; /* Adjusted distance from previous section (30px to 100px from "Contact Us" button) */
+    position: relative; /* Ensure flexbox layout */
+} 
+/* Main Section for Data and Contact Form */
+.data-contact-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Reduced gap to 10px */
+    width: 100%;
+    margin-top: 100px; /* Adjust margin as necessary */
+}
+
+/* Data Section */
+.data-block {
+    width: 520px; /* Fixed width */
+    display: flex;
+    flex-direction: column;
+    gap: 24px; /* Spacing between the lines of text */
+    padding: 20px; /* Padding for spacing inside the block */
+    border: 2px solid #000000; /* Dark black border around the data block */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #000000; /* Dark background for contrast */
+    transform: translate(30%,-10%);
+}
+
+/* Data Heading */
+.data-heading {
+    font-family: Poppins, sans-serif;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 43.2px;
+    letter-spacing: 0%;
+    color: #FFFFFF;
+}
+
+/* Data Description (Second Line) with Gradient Text */
+.data-description {
+    font-family: Poppins, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0%;
+    background: linear-gradient(90deg, #7687b5 0%, #91b0ff 42%, #e2e8f8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Contact Info Links */
+.contact-info a {
+    font-family: Poppins, sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 21px;
+    letter-spacing: 0%;
+    color: #91B0FF; /* Light blue color for links */
+    text-decoration: underline;
+    margin-top: 8px;
+    display: block;
+}
+
+/* Contact Form Section */
+.contact-form-section {
+    width: 484px; /* Fixed width for the contact form */
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* Spacing between the fields */
+    padding: 20px; /* Padding inside the form */
+    background-color: #000000; /* Black background for contrast */
+    border-radius: 8px; /* Rounded corners */
+    border: 2px solid #000000; /* Dark black border around the contact form */
+    transform: translate(-50%,-10%);
+}
+
+/* Name Field */
+.contact-form-section .name-field {
+    width: 484px;
+    height: 36px;
+    border-radius: 4px;
+    border: 1px solid #333333; /* Dark border for input */
+    padding: 10px;
+    font-family: Poppins, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: white;
+    background-color: #080808;
+}
+
+/* Email Field */
+.contact-form-section .email-field {
+    width: 484px;
+    height: 36px;
+    border-radius: 4px;
+    border: 1px solid #333333; /* Dark border for email input */
+    padding: 10px;
+    font-family: Poppins, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: white;
+    background-color: #0a0a0a;
+}
+
+/* Message Field */
+.contact-form-section .message-field {
+    width: 484px;
+    height: 136px;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #333333; /* Dark border for message input */
+    font-family: Poppins, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: white;
+    background-color: #010101;
+    resize: none;
+}
+
+/* Submit Button */
+.submit-button {
+    width: 161px;
+    height: 36px;
+    border-radius: 40px;
+    border: 1px solid #7687B5;
+    background: #7687B54A;
+    font-family: Poppins, sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: #ffffff;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: background 0.3s;
+}
+
+/* Hover Effect for Submit Button */
+.submit-button:hover {
+    background: #7687B5;
+}
+/* AdTask.ai Section */
+.adtask-section {
+  width: 468px;
+  height: 95.96px;
+  margin-top: 20px; /* Space after contact form */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: 2px solid #000000; /* Dark black border */
+  border-radius: 8px;
+  background-color: transparent; /* No solid background */
+}
+
+/* Faint Glowing Blurred Text */
+.adtask-text {
+  font-family: Poppins, sans-serif;
+  font-size: 80px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.1); /* Light faded white */
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+   /* Adds a slight blur effect */
+  letter-spacing: 2px; 
+}
+/* Boost Section - Centered & Spaced */
+.boost-section {
+  width: 584px;
+  margin: 100px auto 0; /* Ensures minimum 100px spacing */
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Background Triangle with Glowing Effect */
+.boost-section::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 140px; /* Covers only content */
+  background: #263048;
+  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  
+  /* Soft glow effect */
+  filter: drop-shadow(5px 5px 15px rgba(255, 255, 255, 0.1));
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+}
+
+/* Main Heading */
+.boost-heading {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 57.6px;
+  color: #FFFFFF;
+}
+
+/* Gradient Colored Second Line */
+.boost-highlight {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 57.6px;
+  background: linear-gradient(90deg, #7687b5 0%, #91b0ff 42%, #e2e8f8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Buttons Container */
+.boost-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+/* Button Styling */
+.boost-button {
+  width: 220px;
+  height: 50px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Button Hover Effect */
+.boost-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+/* Background Grid Effect */
+body {
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 1%, transparent 1%);
+  background-size: 40px 40px;
+  background-color: #000814; /* Adjust to match your theme */
+}
